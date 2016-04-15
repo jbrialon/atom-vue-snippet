@@ -1,0 +1,78 @@
+# Atom Vue Snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+
+
+'.text.html.vue':
+  'Vue Template Tag':
+    'prefix': 'vtemplate',
+    'body': """
+    <template lang="jade">
+    \t
+    </template>
+    """
+  'Vue Script Tag':
+    'prefix': 'vscript',
+    'body': """
+    <script>
+    \t(function () {
+    \t\t'use strict';
+    \t\t
+    \t\tmodule.exports = {
+    \t\t\tname: 'Set-name-here',
+    \t\t\t// Options / Data
+    \t\t\tdata () {
+    \t\t\t\treturn {}
+    \t\t\t},
+    \t\t\tprops: [],
+    \t\t\t//Vuex state machine
+    \t\t\t//vuex:{},
+    \t\t\t//Vue Routing
+    \t\t\t//route:{},
+    \t\t\tcomputed: {},
+    \t\t\tmethods: {},
+    \t\t\t// watch: {},
+    \t\t\t// Options / DOM
+    \t\t\t// el () {},
+    \t\t\t// replace: true,
+    \t\t\t// template: '',
+    \t\t\t// Options / Lifecycle Hooks
+    \t\t\t// init () {},
+    \t\t\t// crated () {},
+    \t\t\t// beforeCompile () {},
+    \t\t\t// compiled () {},
+    \t\t\t// ready () {},
+    \t\t\t// attached () {},
+    \t\t\t// detached () {},
+    \t\t\t// beforeDestroy () {},
+    \t\t\t// destroyed () {},
+    \t\t\t// Options / Assets
+    \t\t\t// directives: {},
+    \t\t\t// elementDirectives: {},
+    \t\t\t// filters: {},
+    \t\t\t// components: {},
+    \t\t\t// transitions: {},
+    \t\t\t// partials: {},
+    \t\t\t// Options / Misc
+    \t\t\t// parent: null,
+    \t\t\t// events: {},
+    \t\t\t// mixins: []
+    \t\t}
+    \t})();
+    </script>
+    """
+  'Vue Style Tag':
+    'prefix': 'vstyle',
+    'body': """
+    <style${1: lang="$2"}${3: scoped}>$0</style>
+    """
